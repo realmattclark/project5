@@ -17,5 +17,4 @@ public:
 	~Audio();
 	bool ReadData(istream& in);
 	bool WriteData(ostream& out);
-	std::string getType() const;
 };

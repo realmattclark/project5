@@ -21,7 +21,7 @@ public:
 	string getUniqueID() const;
 	string getName() const;
 	int getRunningTime() const;
-	virtual string getType();
+	string getType();
 	virtual bool ReadData(istream& in);
 	virtual bool WriteData(ostream& out);
 };

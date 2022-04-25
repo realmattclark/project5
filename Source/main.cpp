@@ -30,7 +30,7 @@ int main() {
         outAudio.open(file2);
         outVideo.open(file3);
         if (!outAudio.is_open() || !outVideo.is_open()) {
-            std::cout << "Failed to open either " << file2 << " or " << file3 << std::endl;
+            cout << "Failed to open either " << file2 << " or " << file3 << endl;
             return -1;
         }
         else {

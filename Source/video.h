@@ -15,8 +15,6 @@ protected:
 public:
     Video();
     Video(string uniqueID, string name, int runningTime, string resolution, string formatDescriptor, string qualitySpec);
-    ~Video();
     bool ReadData(istream& in);
     bool WriteData(ostream& out);
-    string getType();
 };

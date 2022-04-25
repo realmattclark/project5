@@ -19,7 +19,7 @@ Audio::Audio(string uniqueID, string name, int runningTime, string formatDescrip
 
 Audio::~Audio() {}
 
-bool Audio::ReadData(std::istream& in) {
+bool Audio::ReadData(istream& in) {
 	Media::ReadData(in);
 	in.ignore();
 	getline(in, formatDescriptor);
@@ -30,13 +30,10 @@ bool Audio::ReadData(std::istream& in) {
 
 bool Audio::WriteData(ostream& out) {
 	Media::WriteData(out);
-	out << formatDescriptor << std::endl;
-	out << qualitySpec << std::endl;
-	out << "***************************************" << std::endl;
+	out << formatDescriptor << endl;
+	out << qualitySpec << endl;
+	out << "***************************************" << endl;
 	return true;
 }
 
 
-std::string Audio::getType() const {
-	return type;
-}

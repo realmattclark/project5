@@ -38,18 +38,23 @@ void Media::setRunningTime(int runningTime) {
 }
 
 
-std::string Media::getUniqueID() const {
+string Media::getUniqueID() const {
 	return uniqueID;
 }
 
 
-std::string Media::getName() const {
+string Media::getName() const {
 	return name;
 }
 
 
 int Media::getRunningTime() const {
 	return runningTime;
+}
+
+string Media::getType()
+{
+	return string();
 }
 
 
@@ -67,3 +72,4 @@ bool Media::WriteData(ostream& out) {
 	out << runningTime << endl;
 	return true;
 }
+

@@ -21,7 +21,6 @@ Video::Video(string uniqueID, string name, int runningTime,
 	type = "Video";
 };
 
-Video::~Video() {};
 
 bool Video::ReadData(istream& in) {
 	Media::ReadData(in);
@@ -38,11 +37,6 @@ bool Video::WriteData(ostream& out) {
 	out << resolution << endl;
 	out << formatDescriptor << endl;
 	out << qualitySpec << endl;
-	out << "***************************************" << std::endl;
+	out << "***************************************" << endl;
 	return true;
-}
-
-
-std::string Video::getType() const {
-	return type;
 }

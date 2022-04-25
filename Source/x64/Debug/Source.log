@@ -1,7 +1,1 @@
-﻿  main.cpp
-  video.cpp
-C:\Users\mattc\OneDrive\Documents\Github\project5\Source\video.cpp(46,36): error C2511: 'std::string Video::getType(void) const': overloaded member function not found in 'Video'
-C:\Users\mattc\OneDrive\Documents\Github\project5\Source\video.h(8): message : see declaration of 'Video'
-C:\Users\mattc\OneDrive\Documents\Github\project5\Source\video.cpp(47,9): error C2597: illegal reference to non-static member 'Video::type'
-C:\Users\mattc\OneDrive\Documents\Github\project5\Source\video.h(13): message : see declaration of 'Video::type'
-  Generating Code...
+﻿  Source.vcxproj -> C:\Users\mattc\OneDrive\Documents\Github\project5\Source\x64\Debug\Source.exe
