@@ -23,7 +23,7 @@ int main() {
 
     in.open(file1);
     if (!in.is_open()) {
-        std::cout << "Failed to open file: " << file1 << std::endl;
+        cout << "Failed to open file: " << file1 << endl;
         return -1;
     }
     else {

@@ -1,5 +1,4 @@
-#ifndef MEDIA_H
-#define MEDIA_H
+#pragma once
 
 #include <iostream>
 #include <fstream>
@@ -26,5 +25,3 @@ public:
 	virtual bool ReadData(istream& in);
 	virtual bool WriteData(ostream& out);
 };
-
-#endif

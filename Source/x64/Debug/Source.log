@@ -1,9 +1,7 @@
 ﻿  main.cpp
-  media.cpp
-  audio.cpp
   video.cpp
+C:\Users\mattc\OneDrive\Documents\Github\project5\Source\video.cpp(46,36): error C2511: 'std::string Video::getType(void) const': overloaded member function not found in 'Video'
+C:\Users\mattc\OneDrive\Documents\Github\project5\Source\video.h(8): message : see declaration of 'Video'
+C:\Users\mattc\OneDrive\Documents\Github\project5\Source\video.cpp(47,9): error C2597: illegal reference to non-static member 'Video::type'
+C:\Users\mattc\OneDrive\Documents\Github\project5\Source\video.h(13): message : see declaration of 'Video::type'
   Generating Code...
-media.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Media::getType(void)" (?getType@Media@@UEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-audio.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Media::getType(void)" (?getType@Media@@UEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-video.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Media::getType(void)" (?getType@Media@@UEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
-C:\Users\mattc\OneDrive\Documents\Github\cpp_Project5\Source\x64\Debug\Source.exe : fatal error LNK1120: 1 unresolved externals

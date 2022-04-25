@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
+using namespace std;
 Audio::Audio() : Media() {
 	formatDescriptor = "";
 	qualitySpec = "";
@@ -10,16 +10,14 @@ Audio::Audio() : Media() {
 }
 
 
-Audio::Audio(std::string uniqueID, std::string name, int runningTime, std::string formatDescriptor, std::string qualitySpec)
-	: Media(uniqueID, name, runningTime) {
+Audio::Audio(string uniqueID, string name, int runningTime, string formatDescriptor, string qualitySpec) : Media(uniqueID, name, runningTime) {
 	this->formatDescriptor = formatDescriptor;
 	this->qualitySpec = qualitySpec;
 	type = "Audio";
 }
 
 
-Audio::~Audio() {
-}
+Audio::~Audio() {}
 
 bool Audio::ReadData(std::istream& in) {
 	Media::ReadData(in);
@@ -30,7 +28,7 @@ bool Audio::ReadData(std::istream& in) {
 }
 
 
-bool Audio::WriteData(std::ostream& out) {
+bool Audio::WriteData(ostream& out) {
 	Media::WriteData(out);
 	out << formatDescriptor << std::endl;
 	out << qualitySpec << std::endl;

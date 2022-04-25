@@ -1,22 +1,21 @@
-#ifndef AUDIO_H
-#define AUDIO_H
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <string>
 #include "media.h"
+using namespace std;
 
 class Audio : public Media {
 private:
-	std::string formatDescriptor;
-	std::string qualitySpec;
-	std::string type;
+	string formatDescriptor;
+	string qualitySpec;
+	string type;
 
 public:
 	Audio();
-	Audio(std::string uniqueID, std::string name, int runningTime, std::string formatDescriptor, std::string qualitySpec);
+	Audio(string uniqueID, string name, int runningTime, string formatDescriptor, string qualitySpec);
 	~Audio();
-	bool ReadData(std::istream& in);
-	bool WriteData(std::ostream& out);
+	bool ReadData(istream& in);
+	bool WriteData(ostream& out);
 	std::string getType() const;
 };
-#endif

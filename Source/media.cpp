@@ -1,7 +1,11 @@
+
 #include "media.h"
 #include <iostream>
 #include <fstream>
 #include <string>
+using namespace std;
+
+
 Media::Media() {
 	uniqueID = "";
 	name = "";
@@ -9,7 +13,7 @@ Media::Media() {
 }
 
 
-Media::Media(std::string uniqueID, std::string name, int runningTime) {
+Media::Media(string uniqueID, string name, int runningTime) {
 	this->uniqueID = uniqueID;
 	this->name = name;
 	this->runningTime = runningTime;
@@ -19,12 +23,12 @@ Media::Media(std::string uniqueID, std::string name, int runningTime) {
 Media::~Media() {}
 
 
-void Media::setUniqueID(std::string uniqueID) {
+void Media::setUniqueID(string uniqueID) {
 	this->uniqueID = uniqueID;
 }
 
 
-void Media::setName(std::string name) {
+void Media::setName(string name) {
 	this->name = name;
 }
 
@@ -49,7 +53,7 @@ int Media::getRunningTime() const {
 }
 
 
-bool Media::ReadData(std::istream& in) {
+bool Media::ReadData(istream& in) {
 	getline(in, uniqueID);
 	getline(in, name);
 	in >> runningTime;
@@ -57,9 +61,9 @@ bool Media::ReadData(std::istream& in) {
 }
 
 
-bool Media::WriteData(std::ostream& out) {
-	out << uniqueID << std::endl;
-	out << name << std::endl;
-	out << runningTime << std::endl;
+bool Media::WriteData(ostream& out) {
+	out << uniqueID << endl;
+	out << name << endl;
+	out << runningTime << endl;
 	return true;
 }

@@ -1,5 +1,4 @@
-#ifndef VIDEO_H
-#define VIDEO_H
+#pragma once
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -15,12 +14,9 @@ protected:
 
 public:
     Video();
-    Video(string uniqueID, string name, int runningTime,
-        string resolution, string formatDescriptor, string qualitySpec);
+    Video(string uniqueID, string name, int runningTime, string resolution, string formatDescriptor, string qualitySpec);
     ~Video();
     bool ReadData(istream& in);
     bool WriteData(ostream& out);
-    std::string getType() const;
+    string getType();
 };
-
-#endif
