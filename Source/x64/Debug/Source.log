@@ -1,0 +1,9 @@
+﻿  main.cpp
+  media.cpp
+  audio.cpp
+  video.cpp
+  Generating Code...
+media.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Media::getType(void)" (?getType@Media@@UEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
+audio.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Media::getType(void)" (?getType@Media@@UEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
+video.obj : error LNK2001: unresolved external symbol "public: virtual class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Media::getType(void)" (?getType@Media@@UEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ)
+C:\Users\mattc\OneDrive\Documents\Github\cpp_Project5\Source\x64\Debug\Source.exe : fatal error LNK1120: 1 unresolved externals
