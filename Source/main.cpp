@@ -8,6 +8,7 @@
 using namespace std;
 
 int main() {
+    ifstream myfile("Program5Data.txt");
 
     ifstream in;
     ofstream outAudio;
@@ -24,14 +25,11 @@ int main() {
     in.open(file1);
     if (!in.is_open()) {
         cout << "Failed to open file: " << file1 << endl;
-        return -1;
     }
     else {
         outAudio.open(file2);
         outVideo.open(file3);
         if (!outAudio.is_open() || !outVideo.is_open()) {
-            cout << "Failed to open either " << file2 << " or " << file3 << endl;
-            return -1;
         }
         else {
             while (in >> fileType) {
@@ -49,20 +47,26 @@ int main() {
             }
         }
 
-        while (mediaFiles[writeIndex] != nullptr
-            && writeIndex <= readIndex) {
-            if (mediaFiles[writeIndex]->getType() == "Audio") {
+        while (mediaFiles[writeIndex] != nullptr && writeIndex <= readIndex) {
+            if (mediaFiles[writeIndex]->getType() == "A") {
                 mediaFiles[writeIndex]->WriteData(outAudio);
             }
-            else {
+            else if(mediaFiles[writeIndex]->getType()=="V") {
                 mediaFiles[writeIndex]->WriteData(outVideo);
             }
             writeIndex++;
+
         }
     }
-    in.close();
-    outAudio.close();
-    outVideo.close();
 
+    string line;
+    if (myfile.is_open()) {
+        while (getline(myfile, line)) {
+            cout << line << endl;
+        }
+        myfile.close();
+    }
+    else
+        cout << "Unable to open file" << endl;
     return 0;
 }

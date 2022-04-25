@@ -14,7 +14,6 @@ private:
 public:
 	Audio();
 	Audio(string uniqueID, string name, int runningTime, string formatDescriptor, string qualitySpec);
-	~Audio();
 	bool ReadData(istream& in);
 	bool WriteData(ostream& out);
 };

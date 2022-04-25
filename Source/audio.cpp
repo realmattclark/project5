@@ -17,7 +17,6 @@ Audio::Audio(string uniqueID, string name, int runningTime, string formatDescrip
 }
 
 
-Audio::~Audio() {}
 
 bool Audio::ReadData(istream& in) {
 	Media::ReadData(in);
